@@ -10,12 +10,42 @@
     // show random recipe based on category selected
       // ARRAYs: needed to store recipe names according to category
 var letsCookBttn = document.querySelector('.lets-cook');
+var sidesOption = document.getElementById('side');
+var mainOption = document.getElementById('main')
+var formResultsView = document.querySelector('.form-result');
+var cookpotImg = document.querySelector('.icon');
+var viewFormResult = document.querySelector('.view-form-result');
 
 letsCookBttn.addEventListener('click', getRandomRecipe);
 
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
 function getRandomRecipe() {
-  
-};
+  event.preventDefault();
+  hideCookpot();
+  unhideRecipe();
+  if (sidesOption.checked === true) {
+    viewFormResult.innerText = `You should make: ${sides[getRandomIndex(sides)]}!`
+    // console.log(sides[getRandomIndex(sides)]);
+    // return `${sides[getRandomIndex(sides)]}!`;
+ //  } else if ()
+ // mains[getRandomIndex(meals)],
+ // desserts[getRandomIndex(desserts)]
+  } // finish else if statesments SUNDAY!
+}
+
+function showRandomOption() {
+
+}
+function hideCookpot() {
+  cookpotImg.classList.add('hidden');
+}
+function unhideRecipe() {
+  viewFormResult.classList.remove('hidden');
+}
 
 var sides = [
   "Miso Glazed Carrots",
