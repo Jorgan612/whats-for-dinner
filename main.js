@@ -1,14 +1,4 @@
-//Pseudocode:
-//NOTE: Will need an event.preventDefault() method to prevent the
-// form from trying to send the user selection somewhere
-// for radio button:
-  //How do you make it to where only one of the buttons can be selected?
-  //Will there be a toggle option to reselect a new choice option?
-// Need a variable to grab html elements
-// EVENT LISTENERS for LET'S COOK! button
-//FUNCTIONS: what will the button do?
-    // show random recipe based on category selected
-      // ARRAYs: needed to store recipe names according to category
+
 var letsCookBttn = document.querySelector('.lets-cook');
 var sidesOption = document.getElementById('side');
 var mainOption = document.getElementById('main');
@@ -16,9 +6,9 @@ var dessertOption = document.getElementById('dessert');
 var formResultsView = document.querySelector('.form-result');
 var cookpotImg = document.querySelector('.icon');
 var viewFormResult = document.querySelector('.view-form-result');
+var clearBttn = document.querySelector('.clear-bttn');
 
 letsCookBttn.addEventListener('click', getRandomRecipe);
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -26,8 +16,9 @@ function getRandomIndex(array) {
 
 function getRandomRecipe() {
   event.preventDefault();
-  hideCookpot();
-  unhideRecipe();
+  cookpotImg.classList.add('hidden');
+  viewFormResult.classList.remove('hidden');
+  clearBttn.classList.remove('hidden');
   if (sidesOption.checked === true) {
     viewFormResult.innerText = `You should make: ${sides[getRandomIndex(sides)]}!`
   } else if (mainOption.checked === true) {
@@ -36,14 +27,6 @@ function getRandomRecipe() {
       viewFormResult.innerText = `You should make: ${desserts[getRandomIndex(desserts)]}!`
   }
 }
-
-function hideCookpot() {
-  cookpotImg.classList.add('hidden');
-}
-function unhideRecipe() {
-  viewFormResult.classList.remove('hidden');
-}
-
 
 var sides = [
   "Miso Glazed Carrots",
