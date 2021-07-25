@@ -11,7 +11,8 @@
       // ARRAYs: needed to store recipe names according to category
 var letsCookBttn = document.querySelector('.lets-cook');
 var sidesOption = document.getElementById('side');
-var mainOption = document.getElementById('main')
+var mainOption = document.getElementById('main');
+var dessertOption = document.getElementById('dessert');
 var formResultsView = document.querySelector('.form-result');
 var cookpotImg = document.querySelector('.icon');
 var viewFormResult = document.querySelector('.view-form-result');
@@ -29,23 +30,20 @@ function getRandomRecipe() {
   unhideRecipe();
   if (sidesOption.checked === true) {
     viewFormResult.innerText = `You should make: ${sides[getRandomIndex(sides)]}!`
-    // console.log(sides[getRandomIndex(sides)]);
-    // return `${sides[getRandomIndex(sides)]}!`;
- //  } else if ()
- // mains[getRandomIndex(meals)],
- // desserts[getRandomIndex(desserts)]
-  } // finish else if statesments SUNDAY!
+  } else if (mainOption.checked === true) {
+      viewFormResult.innerText = `You should make: ${mains[getRandomIndex(mains)]}!`
+  } else if (dessertOption.checked === true) {
+      viewFormResult.innerText = `You should make: ${desserts[getRandomIndex(desserts)]}!`
+  }
 }
 
-function showRandomOption() {
-
-}
 function hideCookpot() {
   cookpotImg.classList.add('hidden');
 }
 function unhideRecipe() {
   viewFormResult.classList.remove('hidden');
 }
+
 
 var sides = [
   "Miso Glazed Carrots",
