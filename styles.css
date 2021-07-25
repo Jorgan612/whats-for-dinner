@@ -13,6 +13,7 @@ red - #ee5253
 }
 
 body {
+  margin:0;
   background-image: url("assets/burger-friends.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
