@@ -7,7 +7,13 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+
+.hidden {
+  display: none!important;
+}
+
 body {
+  margin:0;
   background-image: url("assets/burger-friends.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,16 +21,17 @@ body {
   background-size: cover;
 }
 
-nav {
+header {
   border:0px;
   padding: 5px;
-  margin: 0px;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
   align-content: center;
+  justify-content: space-between;
 }
 
-#add-recipe-button {
+.add-recipe-button {
   border: 0px;
   padding:10px;
   margin: 20px;
@@ -38,16 +45,13 @@ nav {
   float:right;
   align-content: center;
 }
-div {
-  padding: 7px;
-  font-size: 20px;
-}
 
 h1 {
   font-size: 28px;
   padding-bottom: 0px;
+  justify-content: space-between;
 }
-/*options form*/
+
  .options {
    border:;
    padding:75px;
@@ -55,13 +59,17 @@ h1 {
    height: 250px;
    width: 350px;
    display: grid;
-   /* gap: 2px; */
-   /* grid-template-columns: lfr lfr; */
    font-family: 'Roboto', sans-serif;
    font-size: 15px;
    background-color: rgba(225, 225, 225, .9);
    align-items: flex-start;
    float: left;
+}
+
+div {
+  padding: 7px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 span {
@@ -80,7 +88,7 @@ span {
   border-radius: 4px;
   padding-left: 0px;
 }
-/*cookpot*/
+
 section {
   border:;
   padding:75px;
@@ -90,8 +98,21 @@ section {
   font-family: 'Roboto', sans-serif;
   background-color: rgba(225, 225,225, .9);
   float: left;
-  /* align-items: cfenter; */
-  /* image-orientation: center; */
+}
+
+.clear-bttn {
+  border: 0px;
+  padding:10px;
+  margin: 20px;
+  height:40px;
+  width:80px;
+  font-size: 11px;
+  color: #f8f8ff;
+  text-align: center;
+  background-color: #95a5a6;
+  border-radius: 4px;
+  padding-left: 0px;
+  float:right;
 }
 img.icon {
   border:;

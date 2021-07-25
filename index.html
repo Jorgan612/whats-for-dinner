@@ -5,28 +5,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav>
-        <h1 class="whats-for-dinner"> What's for Dinner? </h1>
-        <button id="add-recipe-button">ADD A RECIPE</button>
-    </nav>
+    <header class="whats-for-dinner">
+        <h1> What's for Dinner? </h1>
+        <button class="add-recipe-button">ADD A RECIPE</button>
+    </header>
     <div id="form">
       <section class="options">
         <h1>What are you looking for?<span>*</span></h1>
         <form>
-          <div>
-            <input type="radio" id="side" name="side" value="side">
+          <div class="test">
+            <input type="radio" id="side" name="food">
             <label for="side">Side</label>
           </div>
           <div>
-            <input type="radio" id="main dish" name="main dish" value="main dish">
+            <input type="radio" id="main" name="food">
             <label for="main dish">Main Dish</label>
           </div>
           <div>
-            <input type="radio" id="dessert" name="dessert" value="dessert">
+            <input type="radio" id="dessert" name="food">
             <label for="dessert">Dessert</label>
           </div>
           <div>
-            <input type="radio" id="entire meal" name="entire meal" value="entire meal">
+            <input type="radio" id="entire meal" name="food">
             <label for="entire meal">Entire Meal</label>
           </div>
           <button class="lets-cook">LET'S COOK!</button>
@@ -34,8 +34,10 @@
       </section>
     </div>
     <div id="result">
-      <section class-"cookpot">
+      <section class="cookpot">
+        <h1 class="hidden view-form-result"><i>You should make:</i></h1>
         <img src="assets/cookpot.svg" class="icon" alt="cooking pot icon" />
+        <button class="hidden clear-bttn">CLEAR</button>
       </section>
     </div>
   </body>
